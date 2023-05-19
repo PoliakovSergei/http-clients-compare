@@ -1,8 +1,7 @@
 plugins {
-    kotlin("jvm") version "1.8.0"
+    kotlin("jvm") version "1.8.21"
     application
 }
-
 group = "ru.sergo"
 version = "1.0-SNAPSHOT"
 
@@ -19,7 +18,7 @@ tasks.test {
 }
 
 kotlin {
-    jvmToolchain(11)
+    jvmToolchain(17)
 }
 
 application {
