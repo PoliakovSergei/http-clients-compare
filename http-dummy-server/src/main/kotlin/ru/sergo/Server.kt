@@ -1,5 +1,6 @@
-package ru.sergo;
+package ru.sergo
 
+import kotlinx.coroutines.delay
 import org.slf4j.LoggerFactory
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -20,9 +21,9 @@ class DummyDelayController {
     private val log = LoggerFactory.getLogger(DummyDelayController::class.java)
 
     @GetMapping("/sync/{ms}")
-    fun delayedSyncGet(@PathVariable ms: Long) {
+    suspend fun delayedSyncGet(@PathVariable ms: Long) {
         log.info("Старт с задержкой $ms ms")
-        Thread.sleep(ms)
+        delay(ms)
         log.info("Завершение с задержкой $ms ms")
     }
 }
