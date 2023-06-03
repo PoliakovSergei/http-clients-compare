@@ -22,4 +22,13 @@ fun main() {
     println()
     println()
     testSpringWebClientSend(requestDelayMs, numOfRequests)
+    println()
+    println()
+    testSpringOpenFeignClientSync(requestDelayMs, 5, ctx)
+    println()
+    println()
+    testOkHttpClientWithFeign(requestDelayMs, 5)
+    println()
+    println()
+    testOkHttpClientAsyncWithFeign(requestDelayMs, numOfRequests)
 }

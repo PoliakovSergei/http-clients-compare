@@ -21,6 +21,10 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.4")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactive:1.6.4")
+    implementation("org.springframework.cloud:spring-cloud-starter-openfeign:4.0.3")
+    implementation("io.github.openfeign:feign-okhttp:12.3")
+    implementation("io.github.openfeign:feign-core:12.3")
+
     testImplementation(kotlin("test"))
 }
 
